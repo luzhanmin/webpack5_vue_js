@@ -8,12 +8,13 @@ module.exports = {
   mode: "development", // 开发模式
   entry: path.resolve(__dirname, "../src/main.js"), // 入口文件
   // web server
+  devtool: 'cheap-module-source-map',
   devServer: {
     static: {
     directory: path.resolve(__dirname, "../dist"), // 打包后的文件路径 directory:目录
     },
     open: true, //自动打开浏览器
-    compress: true, //启动gzip压缩
+    compress: false, //启动gzip压缩
     port: 9000, // 端口号
   },
   output: {
