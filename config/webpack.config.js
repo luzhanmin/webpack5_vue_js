@@ -64,6 +64,10 @@ module.exports = {
         }
       },
       {
+        test:/\.js$/,
+        loader:"babel-loader",
+      },
+      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"], // 从右向左解析原则
       },
